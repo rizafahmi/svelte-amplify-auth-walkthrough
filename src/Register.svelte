@@ -3,6 +3,7 @@
   let password = '';
   let email = '';
 
+  export let handleLoginClick;
   async function handleSubmit() {}
 </script>
 
