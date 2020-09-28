@@ -1,15 +1,12 @@
 <script>
-  import { store } from './auth.js';
-  import Auth from '@aws-amplify/auth';
+  import { store, login } from './auth.js';
 
   let username = '';
   let password = '';
 
   async function handleSubmit() {
     try {
-      const user = await Auth.signIn(username, password);
-      console.log(user);
-      $store = user;
+      await login(username, password);
     } catch (err) {
       console.error(`Error signing in: ${err}`);
     }

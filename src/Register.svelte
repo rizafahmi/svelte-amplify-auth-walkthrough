@@ -1,6 +1,6 @@
 <script>
   import Auth from '@aws-amplify/auth';
-  import { store } from './auth.js';
+  import { store, register, confirm } from './auth.js';
 
   let username = '';
   let password = '';
@@ -11,13 +11,7 @@
   export let handleLoginClick;
   async function handleSubmit() {
     try {
-      await Auth.signUp({
-        username,
-        password,
-        attributes: {
-          email
-        }
-      });
+      await register(username, password, email);
       confirmation = true;
     } catch (err) {
       console.error('Error signing up: ', err);
@@ -26,8 +20,7 @@
 
   async function handleConfirmSubmit() {
     try {
-      const user = await Auth.confirmSignUp(username, code);
-      $store = user;
+      await confirm(username, code);
     } catch (err) {
       console.error('Error confirm sign up: ', err);
     }
