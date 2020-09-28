@@ -19,7 +19,8 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack-dev-server --content-base public"
+    "dev": "webpack-dev-server --content-base public",
+    "start": "server public/"
   },
   "dependencies": {
     "@aws-amplify/auth": "3.4.5",
