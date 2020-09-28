@@ -14,7 +14,7 @@
   export let handlRegisterClick;
 </script>
 
-<h1>Login</h1>
+<h1>Svelte Login</h1>
 <pre>{JSON.stringify($store, null, 2)}</pre>
 <form on:submit|preventDefault={handleSubmit}>
   <fieldset>
