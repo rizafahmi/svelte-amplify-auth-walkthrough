@@ -1,6 +1,8 @@
 <script>
   import { store } from './auth.js';
-  function logout() {}
+  function logout() {
+    $store = null;
+  }
 </script>
 
 <main>

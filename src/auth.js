@@ -1,7 +1,17 @@
 import { writable } from 'svelte/store';
 import Auth from '@aws-amplify/auth';
 
-export const store = writable(null);
+let _user = localStorage.getItem('amplifyUser');
+
+export const store = writable(_user ? JSON.parse(_user) : null);
+
+store.subscribe(function (value) {
+  if (value !== null) {
+    localStorage.setItem('amplifyUser', JSON.stringify(value));
+  } else {
+    localStorage.removeItem('amplifyUser');
+  }
+});
 
 export function logout() {
   store.set(null);
