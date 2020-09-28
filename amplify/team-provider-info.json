@@ -10,6 +10,11 @@
       "StackName": "amplify-svelteamplifyauthwt-dev-105329",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:142577996841:stack/amplify-svelteamplifyauthwt-dev-105329/2efcc650-013e-11eb-ac1e-0abba3d0eb5e",
       "AmplifyAppId": "d2vyybyjoqt3s4"
+    },
+    "categories": {
+      "auth": {
+        "svelteamplifyauthwtf6a52736": {}
+      }
     }
   }
 }

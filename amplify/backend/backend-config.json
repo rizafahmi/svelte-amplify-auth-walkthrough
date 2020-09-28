@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "svelteamplifyauthwtf6a52736": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

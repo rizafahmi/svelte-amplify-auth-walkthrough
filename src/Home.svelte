@@ -1,4 +1,5 @@
 <script>
+  import { store } from './auth.js';
   function logout() {}
 </script>
 
@@ -7,4 +8,5 @@
     You are logged in
     <button type="button" on:click={logout}>Log out</button>
   </h2>
+  <pre>{JSON.stringify($store, null, 2)}</pre>
 </main>
