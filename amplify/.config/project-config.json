@@ -1,0 +1,17 @@
+{
+  "projectName": "svelteamplifyauthwt",
+  "version": "3.0",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "none",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "public",
+      "BuildCommand": "npm run build",
+      "StartCommand": "npm run dev"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}
